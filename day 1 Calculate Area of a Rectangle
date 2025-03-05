@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. 
+           Your class should be named Solution. */
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            
+            // Read two floating-point numbers from input
+            double num1 = Double.parseDouble(br.readLine());
+            double num2 = Double.parseDouble(br.readLine());
+            
+            // Multiply the numbers
+            double result = num1 * num2;
+            
+            // Print the result with one decimal place
+            System.out.printf("%.1f\n", result);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
