@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scanner = new Scanner(System.in);
+        double radius = scanner.nextDouble();
+        scanner.close();
+        
+        double area = Math.PI * radius * radius;
+        
+        // Format the output to one decimal place
+        System.out.printf("%.1f\n", area);
+    }
+}
