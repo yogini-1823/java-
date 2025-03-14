@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read inputs
+        int principal = scanner.nextInt();
+        double rate = scanner.nextDouble();
+        int years = scanner.nextInt();
+        scanner.close();
+        
+        // Calculate compound interest
+        double amount = principal * Math.pow((1 + rate / 100), years);
+        
+        // Print result rounded to 2 decimal places
+        System.out.printf("%.2f%n", amount);
+    }
+}
