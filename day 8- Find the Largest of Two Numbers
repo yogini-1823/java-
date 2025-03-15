@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        // Create a Scanner object to read input from STDIN
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read two integers from input
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        
+        // Print the second integer as output
+        System.out.println(num2);
+        
+        // Close the scanner to prevent resource leaks
+        scanner.close();
+    }
+}
