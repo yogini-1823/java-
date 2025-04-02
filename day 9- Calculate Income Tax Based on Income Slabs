@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        /* Read input from STDIN and process it */
+        Scanner scanner = new Scanner(System.in);
+        double income = scanner.nextDouble(); // Read the income input
+        double tax = 0.0;
+        
+        // Calculate tax based on given conditions
+        if (income <= 250000) {
+            tax = 0.0;
+        } else if (income <= 500000) {
+            tax = 0.05 * (income - 250000);
+        } else if (income <= 1000000) {
+            tax = 12500 + 0.20 * (income - 500000);
+        } else {
+            tax = 112500 + 0.30 * (income - 1000000);
+        }
+        
+        // Print the calculated tax
+        System.out.println(tax);
+        
+        scanner.close();
+    }
+}
