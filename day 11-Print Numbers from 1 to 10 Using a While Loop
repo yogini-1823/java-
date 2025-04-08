@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        // Start from 1
+        int i = 1;
+        
+        // Loop until 10
+        while (i <= 10) {
+            System.out.println(i);
+            i++;
+        }
+    }
+}
