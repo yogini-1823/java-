@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        // Scanner to read input from standard input (STDIN)
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read the full line of input
+        String input = scanner.nextLine();
+        
+        // Create a StringBuilder with the input and reverse it
+        String reversed = new StringBuilder(input).reverse().toString();
+        
+        // Print the reversed string
+        System.out.println(reversed);
+        
+        // Close the scanner
+        scanner.close();
+    }
+}
