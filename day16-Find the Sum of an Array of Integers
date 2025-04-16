@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the entire line of input
+        String line = scanner.nextLine();
+        scanner.close();
+
+        // Split the line by spaces
+        String[] tokens = line.split(" ");
+
+        int sum = 0;
+
+        // Sum all tokens as integers
+        for (String token : tokens) {
+            sum += Integer.parseInt(token);
+        }
+
+        // Output the result
+        System.out.println(sum);
+    }
+}
