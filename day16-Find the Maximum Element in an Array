@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        // Read input from STDIN
+        Scanner scanner = new Scanner(System.in);
+        String line = scanner.nextLine();
+        scanner.close();
+
+        // Split the input into space-separated tokens
+        String[] tokens = line.trim().split(" ");
+
+        int max = Integer.MIN_VALUE;
+
+        // Loop through all tokens and find the maximum
+        for (String token : tokens) {
+            int num = Integer.parseInt(token);
+            if (num > max) {
+                max = num;
+            }
+        }
+
+        // Print the maximum number
+        System.out.println(max);
+    }
+}
