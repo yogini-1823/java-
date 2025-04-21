@@ -1,0 +1,17 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();  // Read the integer input
+        int result = 1;
+
+        for (int i = 1; i <= n; i++) {
+            result *= i;  // Multiply result by each i from 1 to n
+        }
+
+        System.out.println(result);  // Print the factorial
+    }
+}
