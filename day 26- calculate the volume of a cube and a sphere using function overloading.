@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read inputs
+        double cubeSide = scanner.nextDouble();
+        double sphereRadius = scanner.nextDouble();
+        String shapeType = scanner.next();
+
+        // Calculate volume of cube
+        double cubeVolume = Math.pow(cubeSide, 3);
+
+        // Calculate volume of sphere
+        double sphereVolume = 0.0;
+        if (shapeType.equalsIgnoreCase("sphere")) {
+            sphereVolume = (4.0 / 3.0) * Math.PI * Math.pow(sphereRadius, 3);
+        }
+
+        // Print results
+        System.out.println(cubeVolume);
+        System.out.println(sphereVolume);
+
+        scanner.close();
+    }
+}
