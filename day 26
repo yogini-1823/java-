@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Reading inputs: length, breadth, and radius
+        double length = scanner.nextDouble();
+        double breadth = scanner.nextDouble();
+        double radius = scanner.nextDouble();
+        
+        // Calculate area of rectangle
+        double rectangleArea = length * breadth;
+        
+        // Calculate area of circle
+        double circleArea = Math.PI * radius * radius;
+        
+        // Print the results
+        System.out.println(rectangleArea);
+        System.out.println(circleArea);
+        
+        scanner.close();
+    }
+}
