@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the input line
+        String inputLine = scanner.nextLine();
+
+        // Split the input string by commas and trim whitespace
+        String[] numberStrings = inputLine.split(",");
+
+        // Convert to an array of integers
+        int[] numbers = new int[numberStrings.length];
+        for (int i = 0; i < numberStrings.length; i++) {
+            numbers[i] = Integer.parseInt(numberStrings[i].trim());
+        }
+
+        // Initialize variables to track largest and second largest
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+
+        for (int num : numbers) {
+            if (num > largest) {
+                secondLargest = largest;
+                largest = num;
+            } else if (num > secondLargest && num != largest) {
+                secondLargest = num;
+            }
+        }
+
+        // Print the second largest number
+        System.out.println(secondLargest);
+
+        scanner.close();
+    }
+}
