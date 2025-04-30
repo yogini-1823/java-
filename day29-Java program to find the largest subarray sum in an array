@@ -1,0 +1,34 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read input line
+        String inputLine = scanner.nextLine();
+
+        // Split input and convert to integer array
+        String[] parts = inputLine.split(",");
+        int[] arr = new int[parts.length];
+
+        for (int i = 0; i < parts.length; i++) {
+            arr[i] = Integer.parseInt(parts[i].trim());
+        }
+
+        // Apply Kadane's Algorithm
+        int maxCurrent = arr[0];
+        int maxGlobal = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            maxCurrent = Math.max(arr[i], maxCurrent + arr[i]);
+            maxGlobal = Math.max(maxGlobal, maxCurrent);
+        }
+
+        // Print the result
+        System.out.println(maxGlobal);
+
+        scanner.close();
+    }
+}
