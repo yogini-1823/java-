@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the array as a comma-separated string
+        String arrayLine = scanner.nextLine();
+
+        // Read the target number
+        int target = scanner.nextInt();
+
+        // Split and parse the array
+        String[] numberStrings = arrayLine.split(",");
+        int[] numbers = new int[numberStrings.length];
+
+        for (int i = 0; i < numberStrings.length; i++) {
+            numbers[i] = Integer.parseInt(numberStrings[i].trim());
+        }
+
+        // Search for the target
+        int index = -1;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] == target) {
+                index = i;
+                break;
+            }
+        }
+
+        // Output the index or -1
+        System.out.println(index);
+
+        scanner.close();
+    }
+}
