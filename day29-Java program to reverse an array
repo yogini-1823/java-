@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the input line
+        String inputLine = scanner.nextLine();
+
+        // Split and trim the values into an integer array
+        String[] parts = inputLine.split(",");
+        int[] arr = new int[parts.length];
+
+        for (int i = 0; i < parts.length; i++) {
+            arr[i] = Integer.parseInt(parts[i].trim());
+        }
+
+        // Reverse the array in-place
+        int left = 0;
+        int right = arr.length - 1;
+        while (left < right) {
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+            left++;
+            right--;
+        }
+
+        // Print the reversed array in comma-separated format
+        for (int i = 0; i < arr.length; i++) {
+            if (i > 0) System.out.print(", ");
+            System.out.print(arr[i]);
+        }
+
+        scanner.close();
+    }
+}
